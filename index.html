@@ -1,0 +1,215 @@
+    <!------------------Home------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio Website</title>
+    <link rel="icon" href=
+            ""
+          type="">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Documents/logo.png" class="logo" alt="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer</p>
+                <h1> Hi, I'm <span>Diego</span><br> from New York.</h1>
+            </div>
+        </div>
+    </div>
+
+    <!------------------About------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Documents/user.jpeg" alt="user">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am an honors student at Syracuse University, specializing in computer science. I have experience in creating applications with python and java.
+                    I am looking to learn.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Python</span><br></li>
+                        <li><span>Java</span><br></li>
+                        <li><span>HTML</span><br></li>
+                        <li><span>CSS</span><br></li>
+                        <li><span>Spanish</span><br></li>
+                        <li><span>Communication</span><br></li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>None</span><br></li>
+                        <li><span></span><br></li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2027</span><br>Syracuse University, Renée Crown University Honors Program | B.S. Computer Science</li>
+                        <li><span>2023</span><br>Bishop Hartley High School | Magna Cum Laude </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!------------------Portfolio------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Documents/work-1.webp" alt="work-1">
+                <div class="layer">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>COMING SOON</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Documents/work-1.webp" alt="work-1">
+                <div class="layer">
+                    <h3>Automated Trading Bot</h3>
+                    <p>COMING SOON </p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Documents/work-1.webp" alt="work-1">
+                <div class="layer">
+                    <h3>Cat Recognition </h3>
+                    <p>COMING SOON </p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+    <!------------------Contact------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i><ion-icon name="mail-outline"></ion-icon></i> diegomaldonado9911@gmail.com</p>
+                <p><i><ion-icon name="call-outline"></ion-icon></i> 614-569-1801</p>
+                <div class="social-icons">
+                    <a href="https://github.com/diegomaldon" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                    <a href="https://www.linkedin.com/in/diego-maldonado-7aa93527a" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </div>
+                <a href="Documents/Maldonado,%20Diego%20Resume.pdf" download class="btn btn2" >Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <label>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                    </label>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p >Made with <i class="heart"><ion-icon name="heart-outline"></ion-icon></i> by Diego Maldonado</p>
+    </div>
+</div>
+
+    <!------------------Scripts------------------->
+<script>
+
+    var tab_links = document.getElementsByClassName("tab-links");
+    var tab_contents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tab_link of tab_links){
+            tab_link.classList.remove("active-link")
+        }
+        for(tabcontent of tab_contents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidmeu.style.right = "0"
+    }
+    function closemenu(){
+        sidmeu.style.right = "-200px"
+    }
+
+</script>
+
+<script>
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz-Jyp-rHpW_KQ2nW0FKMLEQvtw2VnYYaMg7sr9-AzPp7Ra6PCQYgAB3GrprMw8Fs4/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully!"
+                setTimeout(function (){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('An error has occurred. Please try again.', error.message))
+        })
+
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"> </script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+    <!-- MAIN -->
+    <script src="website.js"></script>
+
+    <!-- ICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+
+</body>
+</html>

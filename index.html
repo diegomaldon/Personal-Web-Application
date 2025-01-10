@@ -10,8 +10,10 @@
             ""
           type="">
     <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.56/build/spline-viewer.js"></script>
 </head>
 <body>
+<spline-viewer class="backgroundImage" url="https://prod.spline.design/3cB5fBS9gHkoI0mo/scene.splinecode"></spline-viewer>
     <div id="header">
         <div class="container">
             <nav>
@@ -85,31 +87,31 @@
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
             <div class="work">
-                <img src="Documents/work-1.webp" alt="work-1">
+                <img src="Documents/data2linear.jpg" alt="work-1">
                 <div class="layer">
-                    <h3>Personal Portfolio Website</h3>
-                    <p>COMING SOON</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="Documents/work-1.webp" alt="work-1">
-                <div class="layer">
-                    <h3>Automated Trading Bot</h3>
+                    <h3>Data2Linear App</h3>
                     <p>COMING SOON </p>
                     <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
             <div class="work">
-                <img src="Documents/work-1.webp" alt="work-1">
+                <img src="Documents/happiness_simulation.webp" alt="work-1">
                 <div class="layer">
-                    <h3>Cat Recognition </h3>
+                    <h3>Happiness Simulation</h3>
+                    <p>COMING SOON </p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Documents/catScanner.webp" alt="work-1">
+                <div class="layer">
+                    <h3>Cat Recognition</h3>
                     <p>COMING SOON </p>
                     <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">See more</a>
+        <a href="#" class="btn">Back to Top</a>
     </div>
 </div>
 
@@ -125,7 +127,7 @@
                     <a href="https://github.com/diegomaldon" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
                     <a href="https://www.linkedin.com/in/diego-maldonado-7aa93527a" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
                 </div>
-                <a href="Documents/Maldonado,%20Diego%20Resume.pdf" download class="btn btn2" >Download CV</a>
+                <a href="Documents/Maldonado%20Diego%20Resume-2.pdf" download class="btn btn2" >Download CV</a>
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
@@ -146,6 +148,7 @@
 </div>
 
     <!------------------Scripts------------------->
+<!--Website Sectioning and Retrieval  -->
 <script>
 
     var tab_links = document.getElementsByClassName("tab-links");
@@ -164,19 +167,21 @@
 
 </script>
 
+<!--Website Interactiveness -->
 <script>
 
-    var sidemeu = document.getElementById("sidemenu")
+    var sidemenu = document.getElementById("sidemenu")
 
     function openmenu(){
-        sidmeu.style.right = "0"
+        sidemenu.style.right = "0"
     }
     function closemenu(){
-        sidmeu.style.right = "-200px"
+        sidemenu.style.right = "-200px"
     }
 
 </script>
 
+<!--Google Sheets Contact Form -->
 <script>
 
         const scriptURL = 'https://script.google.com/macros/s/AKfycbz-Jyp-rHpW_KQ2nW0FKMLEQvtw2VnYYaMg7sr9-AzPp7Ra6PCQYgAB3GrprMw8Fs4/exec'
@@ -202,14 +207,14 @@
 
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"> </script>
 
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
 
-    <!-- MAIN -->
-    <script src="website.js"></script>
+<!-- MAIN -->
+<script src="website.js"></script>
 
-    <!-- ICONS -->
-    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+<!-- ICONS -->
+<script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
 
 </body>
 </html>

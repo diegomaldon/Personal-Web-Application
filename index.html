@@ -10,10 +10,8 @@
             ""
           type="">
     <link rel="stylesheet" href="styles.css">
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.56/build/spline-viewer.js"></script>
 </head>
 <body>
-<spline-viewer class="backgroundImage" url="https://prod.spline.design/3cB5fBS9gHkoI0mo/scene.splinecode"></spline-viewer>
     <div id="header">
         <div class="container">
             <nav>
@@ -31,6 +29,7 @@
                 <p>Software Engineer</p>
                 <h1> Hi, I'm <span>Diego</span><br> from New York.</h1>
             </div>
+            <div id="3d-container"></div>
         </div>
     </div>
 
@@ -43,11 +42,14 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>I am an honors student at Syracuse University, specializing in computer science. I have experience in creating applications with python and java.
-                    I am looking to learn.</p>
+                <p>I am an honors student at Syracuse University,
+                    applying my innovation and problem-solving skills to pursue a degree in Computer Science.
+                    With hands-on experience developing full stack applications in Python and Java,
+                    I am driven by curiosity and a relentless desire to expand my knowledge and skills.
+                </p>
 
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills & Technologies</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
@@ -58,14 +60,19 @@
                         <li><span>Java</span><br></li>
                         <li><span>HTML</span><br></li>
                         <li><span>CSS</span><br></li>
-                        <li><span>Spanish</span><br></li>
-                        <li><span>Communication</span><br></li>
+                        <li><span>Node.js</span><br></li>
+                        <li><span>Haskell</span><br></li>
+                        <li><span>Object-oriented Programming</span><br></li>
+                        <li><span>Quality Assurance</span><br></li>
+                        <li><span>Unit Testing</span><br></li>
+                        <li><span>Agile Development</span><br></li>
+                        <li><span>Git & Software Version Control</span><br></li>
                     </ul>
                 </div>
 
                 <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span>None</span><br></li>
+                        <li><span>Soon to Come (Campus involvement, RA Role, etc.)</span><br></li>
                         <li><span></span><br></li>
                     </ul>
                 </div>
@@ -73,6 +80,7 @@
                 <div class="tab-contents" id="education">
                     <ul>
                         <li><span>2027</span><br>Syracuse University, Renée Crown University Honors Program | B.S. Computer Science</li>
+                        <li><span>2027</span><br>Syracuse University | Minor in Cannabis Studies</li>
                         <li><span>2023</span><br>Bishop Hartley High School | Magna Cum Laude </li>
                     </ul>
                 </div>
@@ -87,26 +95,34 @@
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
             <div class="work">
-                <img src="Documents/data2linear.jpg" alt="work-1">
+                <img src="Documents/data2linear.jpg" alt="data2linear">
                 <div class="layer">
                     <h3>Data2Linear App</h3>
-                    <p>COMING SOON </p>
+                    <p>This project was created by Diego Maldonado and Daniel Canhedo for the 'CuseHacks 2024 24hr hackathon project.
+                        The project's goal is to provide a web interface where a user can upload a CSV file,
+                        store its data in a SQLite database, and create a linear regression model
+                        based off of two provided variables.
+                    </p>
                     <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
             <div class="work">
-                <img src="Documents/happiness_simulation.webp" alt="work-1">
+                <img src="Documents/happiness_simulation.webp" alt="simulator">
                 <div class="layer">
                     <h3>Happiness Simulation</h3>
-                    <p>COMING SOON </p>
+                    <p>This Python project simulates decision-making strategies—exploration, exploitation,
+                        and epsilon-greedy—over 200 days to maximize cumulative happiness. By modeling outcomes
+                        with statistical functions and simulations, the program evaluates the effectiveness of each approach.
+                        This project highlights my skills in algorithm design, probabilistic modeling, and data analysis. </p>
                     <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
             <div class="work">
-                <img src="Documents/catScanner.webp" alt="work-1">
+                <img src="Documents/catScanner.webp" alt="cat-scanner">
                 <div class="layer">
                     <h3>Cat Recognition</h3>
-                    <p>COMING SOON </p>
+                    <p>This project will connect to the user's camera and through constant surveillance of the screen,
+                        an AI model will register when a cat has entered the screen!</p>
                     <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
@@ -215,6 +231,12 @@
 
 <!-- ICONS -->
 <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+
+<!-- Include Three.js library -->
+<script src="https://threejs.org/build/three.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 
 </body>
 </html>

@@ -1,9 +1,9 @@
 //Import the THREE.js library
-import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
+import * as THREE from 'three';
 // To allow for the camera to move around the scene
-import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
+import { OrbitControls } from 'three';
 // To allow for importing the .gltf file
-import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
+import { GLTFLoader } from 'three';
 
 /* MENU SHOW */
 const showMenu = (toggleId, navId) => {
@@ -42,6 +42,7 @@ gsap.from('.home__social-icon', {opacity: 0, duration: 3, delay: 4, y: 25, ease:
 // Render main image  --code source: three.js documentation & gjmolter on GitHub
 //Create a Three.JS Scene
 const scene = new THREE.Scene();
+
 //create a new camera with positions and angles
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 

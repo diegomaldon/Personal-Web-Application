@@ -165,11 +165,13 @@ nav ul li a:hover::after{
 
 .tab-contents ul li span{
     color: #0682fd;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .tab-contents{
     display: none;
+    font-size: 18px;
+    line-height: 2;
 }
 
 .tab-contents.active-tab{
@@ -225,7 +227,7 @@ nav ul li a:hover::after{
     font-weight: 500;
     margin-bottom: 20px;
 }
-/*
+
 .layer a{
     margin-top: 20px;
     color: #0682fd;
@@ -238,7 +240,7 @@ nav ul li a:hover::after{
     border-radius: 50%;
     text-align: center;
 }
-*/
+
 .work:hover img{
     transform: scale(1.1);
 }
